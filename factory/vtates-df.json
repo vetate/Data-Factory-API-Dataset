@@ -1,0 +1,9 @@
+{
+	"name": "vtates-df",
+	"location": "uksouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "5f02f42e-0b3f-4599-8637-3a76b84ae974",
+		"tenantId": "54efe58d-72b7-45af-9a01-30ee5f377a71"
+	}
+}

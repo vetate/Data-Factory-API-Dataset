@@ -1,0 +1,12 @@
+{
+	"name": "AzureSqlDatabase1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=phpwebappdbserver.database.windows.net;initial catalog=phpwebappDB;user id=vtate",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDkwQ0Y3QTNELTY2MjMtNEI1Ni04MThCLTg3MTM4OTA0RjM4RV8zZTY1ZGZiZC1iYTc2LTQzZWEtOWQ5Yy1hZDIwNWEzNGRkOGYiDQp9"
+		}
+	}
+}
