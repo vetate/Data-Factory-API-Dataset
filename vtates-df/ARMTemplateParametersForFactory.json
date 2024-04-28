@@ -1,0 +1,45 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "vtates-df"
+		},
+		"AzureBlobStorage2_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage3_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage4_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase2_connectionString": {
+			"value": ""
+		},
+		"SpotfityBlobStorageLS_connectionString": {
+			"value": ""
+		},
+		"SpotifyBlobLS_connectionString": {
+			"value": ""
+		},
+		"SpotifyBlobStorage_connectionString": {
+			"value": ""
+		},
+		"Spotify_In_Destination_connectionString": {
+			"value": ""
+		},
+		"in_Blob2_connectionString": {
+			"value": ""
+		},
+		"in_blob_connectionString": {
+			"value": ""
+		},
+		"in_destination_connectionString": {
+			"value": ""
+		}
+	}
+}

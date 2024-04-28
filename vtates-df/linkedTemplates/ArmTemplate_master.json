@@ -1,0 +1,126 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "vtates-df"
+		},
+		"AzureBlobStorage2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage2'"
+		},
+		"AzureBlobStorage3_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage3'"
+		},
+		"AzureBlobStorage4_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage4'"
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase1'"
+		},
+		"AzureSqlDatabase2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase2'"
+		},
+		"SpotfityBlobStorageLS_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SpotfityBlobStorageLS'"
+		},
+		"SpotifyBlobLS_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SpotifyBlobLS'"
+		},
+		"SpotifyBlobStorage_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SpotifyBlobStorage'"
+		},
+		"Spotify_In_Destination_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'Spotify_In_Destination'"
+		},
+		"in_Blob2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'in_Blob2'"
+		},
+		"in_blob_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'in_blob'"
+		},
+		"in_destination_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'in_destination'"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "vtates-df_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureBlobStorage2_connectionString": {
+						"value": "[parameters('AzureBlobStorage2_connectionString')]"
+					},
+					"AzureBlobStorage3_connectionString": {
+						"value": "[parameters('AzureBlobStorage3_connectionString')]"
+					},
+					"AzureBlobStorage4_connectionString": {
+						"value": "[parameters('AzureBlobStorage4_connectionString')]"
+					},
+					"AzureSqlDatabase1_connectionString": {
+						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
+					},
+					"AzureSqlDatabase2_connectionString": {
+						"value": "[parameters('AzureSqlDatabase2_connectionString')]"
+					},
+					"SpotfityBlobStorageLS_connectionString": {
+						"value": "[parameters('SpotfityBlobStorageLS_connectionString')]"
+					},
+					"SpotifyBlobLS_connectionString": {
+						"value": "[parameters('SpotifyBlobLS_connectionString')]"
+					},
+					"SpotifyBlobStorage_connectionString": {
+						"value": "[parameters('SpotifyBlobStorage_connectionString')]"
+					},
+					"Spotify_In_Destination_connectionString": {
+						"value": "[parameters('Spotify_In_Destination_connectionString')]"
+					},
+					"in_Blob2_connectionString": {
+						"value": "[parameters('in_Blob2_connectionString')]"
+					},
+					"in_blob_connectionString": {
+						"value": "[parameters('in_blob_connectionString')]"
+					},
+					"in_destination_connectionString": {
+						"value": "[parameters('in_destination_connectionString')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
